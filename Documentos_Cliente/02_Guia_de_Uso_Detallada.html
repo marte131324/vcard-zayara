@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>ZAYARA Maison Soirée — Guía de Uso Detallada</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap');
+  * { margin:0; padding:0; box-sizing:border-box; }
+  @page { size: letter; margin: 2cm 2.5cm; }
+  body { font-family:'Inter',sans-serif; color:#1e293b; line-height:1.7; padding:40px 50px; max-width:850px; margin:0 auto; }
+  .header { border-bottom:3px solid #0e86b0; padding-bottom:18px; margin-bottom:30px; display:flex; justify-content:space-between; align-items:flex-end; }
+  .header h1 { font-size:1.6rem; font-weight:800; color:#042d3d; }
+  .header .sub { font-size:0.8rem; color:#64748b; }
+  .badge { display:inline-block; background:#0e86b0; color:white; padding:4px 12px; border-radius:20px; font-size:0.7rem; font-weight:700; letter-spacing:1px; text-transform:uppercase; }
+  h2 { font-size:1.15rem; font-weight:700; color:#0e86b0; margin:28px 0 12px; padding-bottom:6px; border-bottom:1px solid #e2e8f0; }
+  h3 { font-size:0.95rem; font-weight:700; color:#334155; margin:18px 0 8px; }
+  p, li { font-size:0.88rem; color:#475569; }
+  ul, ol { padding-left:22px; margin:8px 0; }
+  li { margin:6px 0; }
+  .section-card { background:#f8fafc; border:1px solid #e2e8f0; border-radius:12px; padding:20px 24px; margin:16px 0; page-break-inside:avoid; }
+  .section-card h3 { margin-top:0; color:#0e86b0; }
+  .step { display:flex; gap:14px; margin:12px 0; align-items:flex-start; }
+  .step-num { background:#0e86b0; color:white; width:28px; height:28px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:800; font-size:0.8rem; flex-shrink:0; margin-top:2px; }
+  .step-text { flex:1; }
+  .tip { background:#f0fdf4; border-left:4px solid #22c55e; padding:12px 16px; border-radius:0 8px 8px 0; margin:14px 0; font-size:0.84rem; color:#166534; }
+  .warn { background:#fef3c7; border-left:4px solid #f59e0b; padding:12px 16px; border-radius:0 8px 8px 0; margin:14px 0; font-size:0.84rem; color:#92400e; }
+  .note { background:#eff6ff; border-left:4px solid #0e86b0; padding:12px 16px; border-radius:0 8px 8px 0; margin:14px 0; font-size:0.84rem; color:#1e40af; }
+  table { width:100%; border-collapse:collapse; margin:14px 0; font-size:0.84rem; }
+  th { background:#0e86b0; color:white; padding:10px 14px; text-align:left; font-weight:600; }
+  td { padding:10px 14px; border-bottom:1px solid #e2e8f0; }
+  tr:nth-child(even) td { background:#f8fafc; }
+  .footer { margin-top:40px; padding-top:16px; border-top:2px solid #e2e8f0; font-size:0.75rem; color:#94a3b8; text-align:center; }
+  @media print { body { padding:0; } .section-card { break-inside:avoid; } }
+</style>
+</head>
+<body>
+
+  <div class="header">
+    <div>
+      <span class="badge">Documento 2 de 3</span>
+      <h1>Guía de Uso Detallada</h1>
+      <p class="sub">ZAYARA Maison Soirée — Tour completo de su VCard Digital</p>
+    </div>
+    <div style="text-align:right;">
+      <p class="sub">Fecha: Abril 2026</p>
+      <p class="sub">Versión: 1.0</p>
+    </div>
+  </div>
+
+  <p>Este documento es su manual completo para entender y aprovechar al máximo cada sección de su Tarjeta Digital Inteligente. Le recomendamos leerlo con su teléfono al lado para ir probando cada función.</p>
+
+  <div class="note">
+    <strong>🔗 Enlace de su VCard:</strong> <a href="https://vcard-zayara.vercel.app" style="color:#0e86b0; font-weight:600;">https://vcard-zayara.vercel.app</a><br>
+    Este enlace es permanente. Puede compartirlo en cualquier momento y desde cualquier dispositivo.
+  </div>
+
+  <!-- SECCIÓN 1 -->
+  <h2>1. Acceso y Compartición</h2>
+  <div class="section-card">
+    <h3>¿Cómo abrir su VCard?</h3>
+    <p>Su VCard es una página web que funciona en cualquier navegador de celular, tablet o computadora. No requiere instalar ninguna aplicación.</p>
+    
+    <h3>¿Cómo compartirla con clientes?</h3>
+    <div class="step">
+      <div class="step-num">1</div>
+      <div class="step-text"><strong>Por WhatsApp:</strong> Copie el enlace y péguelo en cualquier chat. Automáticamente aparecerá una vista previa con su logo y nombre de negocio.</div>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <div class="step-text"><strong>En su Bio de Instagram:</strong> Coloque el enlace en la sección de "Sitio web" de su perfil de Instagram.</div>
+    </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <div class="step-text"><strong>En persona:</strong> Abra la VCard en su celular y muéstrela directamente al cliente.</div>
+    </div>
+    <div class="step">
+      <div class="step-num">4</div>
+      <div class="step-text"><strong>En tarjetas físicas:</strong> Puede imprimir el enlace o un código QR que dirija directamente a su VCard.</div>
+    </div>
+  </div>
+
+  <!-- SECCIÓN 2 -->
+  <h2>2. Pantalla de Bienvenida (Splash Screen)</h2>
+  <div class="section-card">
+    <h3>¿Qué es?</h3>
+    <p>Es la primera pantalla que ve su cliente al abrir el enlace. Muestra su logo con un efecto de luz LED circular que da una primera impresión de elegancia y profesionalismo.</p>
+    <p>Esta pantalla dura aproximadamente 2-3 segundos y se desvanece automáticamente para dar paso al contenido principal.</p>
+    <div class="tip">
+      <strong>💡 Dato:</strong> Esta pantalla da la sensación de que están abriendo una aplicación profesional, no solo un "link más". Esto genera confianza inmediata.
+    </div>
+  </div>
+
+  <!-- SECCIÓN 3 -->
+  <h2>3. Portada y Perfil</h2>
+  <div class="section-card">
+    <h3>Video de Portada</h3>
+    <p>Al entrar a la VCard, su cliente verá un video de fondo que se reproduce automáticamente sin sonido. Este video muestra la esencia de su trabajo y crea un ambiente visual atractivo.</p>
+    
+    <h3>Foto de Perfil con Ring LED</h3>
+    <p>Su logo aparece centrado con un anillo de luz dorada que lo hace resaltar de forma elegante sobre el fondo.</p>
+    
+    <h3>Nombre y Descripción</h3>
+    <p>Debajo del logo aparece el nombre <strong>"ZAYARA Maison Soirée"</strong> junto con su descripción de servicios. Este texto se puede modificar en cualquier momento.</p>
+  </div>
+
+  <!-- SECCIÓN 4 -->
+  <h2>4. Botones de Acción Rápida</h2>
+  <div class="section-card">
+    <h3>¿Qué son las "Pastillas" de contacto?</h3>
+    <p>Son los íconos circulares que aparecen debajo de su perfil. Cada uno tiene una función que se ejecuta con un solo toque:</p>
+    <table>
+      <tr><th>Ícono</th><th>Función</th><th>¿Qué pasa al tocarlo?</th></tr>
+      <tr><td>📷 Instagram</td><td>Ir a su perfil</td><td>Abre directamente su cuenta @zayara.events en Instagram</td></tr>
+      <tr><td>💬 WhatsApp</td><td>Enviar mensaje</td><td>Abre un chat directo con su número de WhatsApp (229 411 8697)</td></tr>
+      <tr><td>🍽️ Snacks</td><td>Ver catálogo</td><td>Abre el menú interactivo de su mesa de snacks</td></tr>
+      <tr><td>📞 Teléfono</td><td>Llamar</td><td>Inicia una llamada directa al 229 175 7215</td></tr>
+    </table>
+    <div class="tip">
+      <strong>💡 Importante:</strong> El botón de WhatsApp es el más usado por sus clientes. Asegúrese de que el número registrado esté siempre activo.
+    </div>
+  </div>
+
+  <!-- SECCIÓN 5 -->
+  <h2>5. Botón "Ver Catálogo de Snacks"</h2>
+  <div class="section-card">
+    <h3>¿Qué es?</h3>
+    <p>Es un botón grande y visible que abre el menú completo de su mesa de snacks. Al tocarlo, se despliega una vista elegante con todas las categorías de productos disponibles para sus clientes.</p>
+    <p>Incluye categorías como: Frituras, Botana Salada, Dulces Picantes, Caramelo, Gomitas y Verduras preparadas.</p>
+  </div>
+
+  <!-- SECCIÓN 6 -->
+  <h2>6. Cápsula de Video</h2>
+  <div class="section-card">
+    <h3>Video Promocional 16:9</h3>
+    <p>Antes de la galería de imágenes, aparece una cápsula con formato cinematográfico (16:9) que reproduce su video promocional de forma automática y en silencio.</p>
+    <p>Este video complementa la portada y permite a sus clientes apreciar sus eventos en movimiento.</p>
+  </div>
+
+  <!-- SECCIÓN 7 -->
+  <h2>7. Galería de Imágenes</h2>
+  <div class="section-card">
+    <h3>Carrusel de Fotos</h3>
+    <p>Después del video, sus clientes encontrarán un carrusel deslizable con fotografías de sus mejores trabajos. Pueden hacer swipe (deslizar) hacia los lados para ver todas las imágenes.</p>
+    <p>Al tocar cualquier imagen, se abre en pantalla completa con zoom para que aprecien cada detalle.</p>
+    <div class="note">
+      <strong>ℹ️ Nota:</strong> Si desea agregar o cambiar fotos de la galería, solo envíenos las nuevas imágenes por WhatsApp y las actualizamos sin costo.
+    </div>
+  </div>
+
+  <!-- SECCIÓN 8 -->
+  <h2>8. Modo Oscuro / Claro</h2>
+  <div class="section-card">
+    <h3>¿Qué es el botón de tema?</h3>
+    <p>Su VCard incluye un botoncito en forma de sol/luna que permite a sus clientes cambiar entre <strong>modo claro</strong> (fondo blanco) y <strong>modo oscuro</strong> (fondo navy). Esto no es solo un estilo visual: muchas personas prefieren usar su celular en modo oscuro, especialmente de noche, y esta función se lo facilita.</p>
+    <div class="tip">
+      <strong>💡 Dato:</strong> El modo oscuro reduce el consumo de batería en celulares con pantalla OLED, lo cual es un extra que sus clientes van a agradecer.
+    </div>
+  </div>
+
+  <!-- SECCIÓN 9 — EL COTIZADOR -->
+  <h2>9. Cotizador Inteligente de Eventos</h2>
+  <div class="section-card">
+    <h3>¿Qué es el Cotizador?</h3>
+    <p>Es la función más poderosa de su VCard. Permite a sus clientes armar paso a paso su solicitud de cotización y enviarla directamente a su WhatsApp con todos los detalles organizados. Ya no necesita ir preguntando dato por dato: el sistema lo hace por usted.</p>
+  </div>
+
+  <div class="section-card">
+    <h3>Paso 1: Tipo de Evento</h3>
+    <p>El cliente selecciona qué tipo de celebración está planeando:</p>
+    <ul>
+      <li>👑 XV Años</li>
+      <li>💕 Boda</li>
+      <li>⭐ Bautizo</li>
+      <li>🎈 Fiesta Infantil</li>
+      <li>📅 Otro Evento (Baby shower, Primera Comunión, Cumpleaños, etc.)</li>
+    </ul>
+    <p>Al seleccionar uno, se ilumina en dorado para confirmar la selección y automáticamente se habilita el botón "Siguiente".</p>
+  </div>
+
+  <div class="section-card">
+    <h3>Paso 2: Servicios que Necesita</h3>
+    <p>El cliente puede seleccionar <strong>uno o varios</strong> de sus servicios:</p>
+    <ul>
+      <li>✨ Decoración Completa</li>
+      <li>🌸 Centros de Mesa</li>
+      <li>🍽️ Mesa de Snacks</li>
+      <li>📋 Asesoría de Evento</li>
+    </ul>
+    <p>Puede elegir varias opciones al mismo tiempo. Cada una se ilumina al seleccionarla.</p>
+    <div class="warn">
+      <strong>⚠️ Importante:</strong> Si el cliente selecciona <strong>"Mesa de Snacks"</strong>, el cotizador le mostrará un paso adicional para configurar su paquete. Si no la selecciona, ese paso se omite automáticamente.
+    </div>
+  </div>
+
+  <div class="section-card">
+    <h3>Paso 2.5: Configurar Mesa de Snacks (Solo si eligió este servicio)</h3>
+    <p>Este es el paso donde el cliente elige su paquete de snacks y los productos específicos que quiere. Tiene 4 opciones:</p>
+    
+    <table>
+      <tr><th>Paquete</th><th>Personas</th><th>Precio</th><th>¿Qué incluye?</th></tr>
+      <tr><td><strong>Básico</strong></td><td>50</td><td>$1,500</td><td>2 opciones de cada categoría</td></tr>
+      <tr><td><strong>Medio</strong></td><td>100</td><td>$2,850</td><td>3 opciones en fritura y botana</td></tr>
+      <tr><td><strong>Premium</strong></td><td>150</td><td>$3,750</td><td>Opciones extendidas + Verdura</td></tr>
+      <tr><td><strong>Personalizado</strong></td><td>Variable</td><td>A cotizar</td><td>El cliente solicita una cotización manual</td></tr>
+    </table>
+
+    <p><strong>Si elige Básico, Medio o Premium:</strong> El sistema automáticamente le muestra los productos disponibles y le permite seleccionar hasta el límite de cada categoría. No podrá exceder el número de opciones permitidas.</p>
+    
+    <p><strong>Si elige Personalizado:</strong> El sistema le pide al cliente que escriba cuántos invitados tendrá. No puede elegir productos directamente; en su lugar, le llegará a usted la solicitud para que le arme una cotización manual.</p>
+
+    <h3>Categorías de Productos</h3>
+    <table>
+      <tr><th>Categoría</th><th>Productos disponibles</th></tr>
+      <tr><td>🍟 Fritura Salada</td><td>Cuadrado, Lagrimita, Redondo, Papas, Palomitas</td></tr>
+      <tr><td>🥜 Botana Salada</td><td>Cacahuate Japonés/Salado/Enchilado, Churritos salados/enchilados</td></tr>
+      <tr><td>🌶️ Dulces Picantes</td><td>Manguito, Paleta de tamarindo, Pulparindo, Tarugo</td></tr>
+      <tr><td>🍬 Caramelo</td><td>Bocadines, Barquillo, Paleta de caramelo, Mazapán, Dedos de la Novia</td></tr>
+      <tr><td>🍬 Gomitas</td><td>Gusanos, Aros, Moras, Mini gomitas, Gomitas azucaradas</td></tr>
+      <tr><td>🥒 Verdura (Premium)</td><td>Jícama, Pepino, Zanahoria</td></tr>
+    </table>
+
+    <div class="tip">
+      <strong>💡 ¿Cómo funciona el límite?</strong> Si el cliente eligió el paquete "Básico" y ya seleccionó 2 frituras, el sistema no le dejará elegir una tercera y le avisará visualmente que ya alcanzó el máximo.
+    </div>
+  </div>
+
+  <div class="section-card">
+    <h3>Paso 3: Cantidad de Invitados (Solo modo Personalizado)</h3>
+    <p>Este paso <strong>solo aparece</strong> si el cliente eligió el paquete "Personalizado". Le pide que escriba el número de invitados para que usted prepare la cotización a medida.</p>
+    <p>Si eligió un paquete predefinido (Básico, Medio o Premium), este paso se salta automáticamente porque la cantidad ya está incluida en el paquete.</p>
+  </div>
+
+  <div class="section-card">
+    <h3>Paso 4: Fecha del Evento</h3>
+    <p>El cliente selecciona la fecha de su evento en un calendario. Esto le permite a usted organizar su agenda con anticipación.</p>
+  </div>
+
+  <div class="section-card">
+    <h3>Paso 5: Datos de Contacto del Cliente</h3>
+    <p>El cliente escribe su nombre y número de teléfono para que usted pueda contactarlo de vuelta.</p>
+  </div>
+
+  <div class="section-card">
+    <h3>Paso 6: Resumen y Envío por WhatsApp</h3>
+    <p>El último paso muestra un resumen completo de todo lo que el cliente seleccionó:</p>
+    <ul>
+      <li>Tipo de evento</li>
+      <li>Servicios seleccionados</li>
+      <li>Paquete de snacks y productos elegidos</li>
+      <li>Cantidad de invitados</li>
+      <li>Fecha del evento</li>
+      <li>Nombre y teléfono del cliente</li>
+    </ul>
+    <p>Al presionar el botón verde <strong>"Enviar por WhatsApp"</strong>, toda esta información se envía a su chat de WhatsApp como un mensaje automático perfectamente formateado. Usted solo tiene que responder.</p>
+    <div class="note">
+      <strong>ℹ️ El mensaje llega directo a su WhatsApp.</strong> No necesita una app externa ni una computadora. Todo entra a su chat normal de WhatsApp Business o personal.
+    </div>
+  </div>
+
+  <!-- SECCIÓN 10 -->
+  <h2>10. Pie de Página (Footer)</h2>
+  <div class="section-card">
+    <h3>Créditos y Contacto del Desarrollador</h3>
+    <p>Al final de su VCard aparece el logo y enlace del desarrollador (Treze Labs). Este es un requisito estándar del servicio y enlaza al WhatsApp de soporte técnico en caso de que usted necesite asistencia.</p>
+  </div>
+
+  <div class="footer">
+    ZAYARA Maison Soirée — Documentación de Entrega &copy; 2026 Christian Belmont - Desarrollo de Sistemas Digitales<br>
+    Este documento es confidencial y exclusivo para el cliente.
+  </div>
+</body>
+</html>

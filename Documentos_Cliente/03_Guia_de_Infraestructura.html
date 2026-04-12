@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>ZAYARA Maison Soirée — Guía de Infraestructura y Respaldo</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap');
+  * { margin:0; padding:0; box-sizing:border-box; }
+  @page { size: letter; margin: 2cm 2.5cm; }
+  body { font-family:'Inter',sans-serif; color:#1e293b; line-height:1.7; padding:40px 50px; max-width:850px; margin:0 auto; }
+  .header { border-bottom:3px solid #0e86b0; padding-bottom:18px; margin-bottom:30px; display:flex; justify-content:space-between; align-items:flex-end; }
+  .header h1 { font-size:1.6rem; font-weight:800; color:#042d3d; }
+  .header .sub { font-size:0.8rem; color:#64748b; }
+  .badge { display:inline-block; background:#0e86b0; color:white; padding:4px 12px; border-radius:20px; font-size:0.7rem; font-weight:700; letter-spacing:1px; text-transform:uppercase; }
+  h2 { font-size:1.15rem; font-weight:700; color:#0e86b0; margin:28px 0 12px; padding-bottom:6px; border-bottom:1px solid #e2e8f0; }
+  h3 { font-size:0.95rem; font-weight:700; color:#334155; margin:18px 0 8px; }
+  p, li { font-size:0.88rem; color:#475569; }
+  ul, ol { padding-left:22px; margin:8px 0; }
+  li { margin:6px 0; }
+  .section-card { background:#f8fafc; border:1px solid #e2e8f0; border-radius:12px; padding:20px 24px; margin:16px 0; page-break-inside:avoid; }
+  .section-card h3 { margin-top:0; color:#0e86b0; }
+  .step { display:flex; gap:14px; margin:12px 0; align-items:flex-start; }
+  .step-num { background:#0e86b0; color:white; width:28px; height:28px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:800; font-size:0.8rem; flex-shrink:0; margin-top:2px; }
+  .step-text { flex:1; }
+  .tip { background:#f0fdf4; border-left:4px solid #22c55e; padding:12px 16px; border-radius:0 8px 8px 0; margin:14px 0; font-size:0.84rem; color:#166534; }
+  .warn { background:#fef3c7; border-left:4px solid #f59e0b; padding:12px 16px; border-radius:0 8px 8px 0; margin:14px 0; font-size:0.84rem; color:#92400e; }
+  .danger { background:#fef2f2; border-left:4px solid #ef4444; padding:12px 16px; border-radius:0 8px 8px 0; margin:14px 0; font-size:0.84rem; color:#991b1b; }
+  .note { background:#eff6ff; border-left:4px solid #0e86b0; padding:12px 16px; border-radius:0 8px 8px 0; margin:14px 0; font-size:0.84rem; color:#1e40af; }
+  .tree { font-family:'Courier New', monospace; background:#0f172a; color:#94a3b8; padding:20px 24px; border-radius:12px; font-size:0.82rem; line-height:1.9; margin:16px 0; }
+  .tree .folder { color:#22d3ee; font-weight:700; }
+  .tree .file { color:#a5f3fc; }
+  .tree .desc { color:#64748b; font-style:italic; }
+  .tree .critical { color:#f97316; font-weight:700; }
+  table { width:100%; border-collapse:collapse; margin:14px 0; font-size:0.84rem; }
+  th { background:#0e86b0; color:white; padding:10px 14px; text-align:left; font-weight:600; }
+  td { padding:10px 14px; border-bottom:1px solid #e2e8f0; }
+  tr:nth-child(even) td { background:#f8fafc; }
+  .footer { margin-top:40px; padding-top:16px; border-top:2px solid #e2e8f0; font-size:0.75rem; color:#94a3b8; text-align:center; }
+  @media print { body { padding:0; } .section-card, .tree { break-inside:avoid; } }
+</style>
+</head>
+<body>
+
+  <div class="header">
+    <div>
+      <span class="badge">Documento 3 de 3</span>
+      <h1>Guía de Infraestructura y Respaldo</h1>
+      <p class="sub">ZAYARA Maison Soirée — Mapa técnico, hosting y protocolo de recuperación</p>
+    </div>
+    <div style="text-align:right;">
+      <p class="sub">Fecha: Abril 2026</p>
+      <p class="sub">Versión: 1.0</p>
+    </div>
+  </div>
+
+  <p>Este documento describe la estructura técnica de su proyecto, dónde vive su VCard en internet, y cómo se respalda y recupera en caso de ser necesario. Este archivo es de referencia para el equipo técnico o para usted en caso de que en el futuro decida hacer cambios por su cuenta.</p>
+
+  <!-- SECCIÓN 1 -->
+  <h2>1. Estructura de Carpeta del Proyecto</h2>
+  <div class="section-card">
+    <h3>Árbol de Archivos</h3>
+    <p>Así está organizado el proyecto en la computadora de desarrollo:</p>
+  </div>
+
+  <div class="tree">
+    <span class="folder">📁 vcard-zayara/</span><br>
+    ├── <span class="critical">index.html</span> <span class="desc">← Archivo principal (toda la VCard)</span><br>
+    ├── <span class="folder">📁 css/</span><br>
+    │   └── <span class="file">style.css</span> <span class="desc">← Todos los estilos visuales</span><br>
+    ├── <span class="folder">📁 js/</span><br>
+    │   └── <span class="file">app.js</span> <span class="desc">← Lógica del cotizador y animaciones</span><br>
+    ├── <span class="folder">📁 assets/</span><br>
+    │   ├── <span class="folder">📁 logo/</span><br>
+    │   │   └── <span class="file">logo.jpeg</span> <span class="desc">← Logo principal y favicon</span><br>
+    │   ├── <span class="folder">📁 Img/</span><br>
+    │   │   ├── <span class="file">hero-bg.jpg</span> <span class="desc">← Imagen de fondo de portada</span><br>
+    │   │   └── <span class="file">profile-pic.jpg</span> <span class="desc">← Foto de perfil / splash</span><br>
+    │   └── <span class="folder">📁 video/</span><br>
+    │       └── <span class="file">hero-video.mp4</span> <span class="desc">← Video promocional</span><br>
+    ├── <span class="folder">📁 img/</span><br>
+    │   ├── <span class="file">gal-1.jpg ... gal-6.jpg</span> <span class="desc">← Fotos de galería</span><br>
+    │   └── <span class="file">gal-snacks.jpg</span> <span class="desc">← Imagen de la mesa de snacks</span><br>
+    └── <span class="folder">📁 Documentos_Cliente/</span><br>
+        ├── <span class="file">01_Requerimientos_Onboarding.pdf</span><br>
+        ├── <span class="file">02_Guia_de_Uso_Detallada.pdf</span><br>
+        └── <span class="file">03_Guia_de_Infraestructura.pdf</span><br>
+  </div>
+
+  <!-- SECCIÓN 2 -->
+  <h2>2. Descripción de Archivos Clave</h2>
+  <div class="section-card">
+    <table>
+      <tr><th>Archivo</th><th>Propósito</th><th>¿Se puede editar?</th></tr>
+      <tr><td><strong>index.html</strong></td><td>Contiene toda la estructura de la VCard: el layout, los textos, los botones del cotizador, las imágenes y los meta-datos para redes sociales.</td><td>Sí (con conocimiento técnico)</td></tr>
+      <tr><td><strong>css/style.css</strong></td><td>Controla toda la apariencia visual: colores, animaciones, modo oscuro, responsive, fuentes, efectos de LED, etc.</td><td>Sí (con conocimiento técnico)</td></tr>
+      <tr><td><strong>js/app.js</strong></td><td>Controla la lógica del cotizador: flujo multi-paso, restricciones de paquetes, armado del mensaje de WhatsApp, galería interactiva, splash screen, tema oscuro.</td><td>Sí (con conocimiento técnico)</td></tr>
+      <tr><td><strong>assets/logo/logo.jpeg</strong></td><td>Logo principal. También se usa como favicon (ícono de pestaña) y como imagen de vista previa en WhatsApp/Facebook.</td><td>Reemplazar con mismo nombre</td></tr>
+      <tr><td><strong>assets/video/hero-video.mp4</strong></td><td>Video promocional de portada y cápsula 16:9.</td><td>Reemplazar con mismo nombre</td></tr>
+    </table>
+  </div>
+
+  <!-- SECCIÓN 3 -->
+  <h2>3. Hosting y Dominio</h2>
+  <div class="section-card">
+    <h3>¿Dónde vive su VCard en Internet?</h3>
+    <table>
+      <tr><th>Concepto</th><th>Detalle</th></tr>
+      <tr><td>Plataforma de Hosting</td><td>Vercel (vercel.com)</td></tr>
+      <tr><td>URL Actual</td><td><strong>https://vcard-zayara.vercel.app</strong></td></tr>
+      <tr><td>Costo del Hosting</td><td>$0 MXN (plan gratuito de Vercel, completamente funcional)</td></tr>
+      <tr><td>Certificado SSL (HTTPS)</td><td>✅ Activado automáticamente (candadito verde)</td></tr>
+      <tr><td>CDN Global</td><td>✅ Distribución global (carga rápida desde cualquier parte del mundo)</td></tr>
+      <tr><td>Uptime</td><td>99.9% garantizado por Vercel</td></tr>
+    </table>
+    <div class="tip">
+      <strong>💡 Dato importante:</strong> Su VCard está alojada en un plan gratuito que no tiene fecha de vencimiento. Mientras Vercel exista (es una empresa valorada en billones de dólares que hospeda millones de sitios), su VCard estará en línea.
+    </div>
+  </div>
+
+  <!-- SECCIÓN 4 -->
+  <h2>4. ¿Cómo se Actualiza?</h2>
+  <div class="section-card">
+    <h3>Proceso de Actualización</h3>
+    <p>Cuando usted nos pida un cambio (nueva foto, precio actualizado, nuevo servicio), el proceso es:</p>
+    <div class="step">
+      <div class="step-num">1</div>
+      <div class="step-text">Usted nos envía los cambios por WhatsApp (fotos, textos, precios, etc.)</div>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <div class="step-text">Nosotros editamos los archivos en nuestra computadora local</div>
+    </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <div class="step-text">Subimos los cambios a Vercel con un comando de 2 segundos</div>
+    </div>
+    <div class="step">
+      <div class="step-num">4</div>
+      <div class="step-text">En menos de 3 minutos, su VCard ya está actualizada en todo el mundo</div>
+    </div>
+    <div class="note">
+      <strong>ℹ️ Los cambios menores</strong> (texto, fotos, precios) se realizan sin costo adicional durante los primeros 30 días. Después, le ofrecemos paquetes de mantenimiento muy accesibles.
+    </div>
+  </div>
+
+  <!-- SECCIÓN 5 -->
+  <h2>5. Dominio Personalizado (Opcional)</h2>
+  <div class="section-card">
+    <h3>¿Quiere una URL más corta o con su marca?</h3>
+    <p>Actualmente su enlace es <code>vcard-zayara.vercel.app</code>. Si en el futuro desea un dominio como <strong>zayara.com</strong> o <strong>zayara.mx</strong>, podemos configurarlo.</p>
+    
+    <h3>Costos aproximados de un dominio propio:</h3>
+    <table>
+      <tr><th>Dominio</th><th>Precio aproximado anual</th></tr>
+      <tr><td>.com</td><td>$250 — $350 MXN/año</td></tr>
+      <tr><td>.mx</td><td>$450 — $600 MXN/año</td></tr>
+      <tr><td>.com.mx</td><td>$350 — $500 MXN/año</td></tr>
+    </table>
+    <p>La configuración del dominio personalizado no tiene costo extra, solo el precio del dominio en sí.</p>
+  </div>
+
+  <!-- SECCIÓN 6 -->
+  <h2>6. Respaldo y Recuperación</h2>
+  <div class="section-card">
+    <h3>¿Qué pasa si algo se borra o falla?</h3>
+    <p>Su proyecto está protegido en múltiples niveles:</p>
+    <table>
+      <tr><th>Nivel de Respaldo</th><th>Descripción</th></tr>
+      <tr><td>💾 Copia Local</td><td>El proyecto completo está guardado en la computadora de desarrollo con respaldo en disco externo.</td></tr>
+      <tr><td>☁️ Vercel Cloud</td><td>Cada vez que se sube una actualización, Vercel guarda un historial completo de versiones. Podemos regresar a cualquier versión anterior con un clic.</td></tr>
+      <tr><td>📦 Entrega USB</td><td>Al finalizar el proyecto, usted puede solicitar una copia completa de todos los archivos en USB o por correo electrónico comprimido (.zip).</td></tr>
+    </table>
+    <div class="danger">
+      <strong>🔴 Importante:</strong> Si usted pierde su teléfono o cambia de número de WhatsApp, avísenos para actualizar el número de contacto en la VCard. De lo contrario, las cotizaciones de sus clientes llegarán al número anterior.
+    </div>
+  </div>
+
+  <!-- SECCIÓN 7 -->
+  <h2>7. Soporte y Escalabilidad Futura</h2>
+  <div class="section-card">
+    <h3>¿Qué más se puede agregar en el futuro?</h3>
+    <p>Su VCard está diseñada para crecer con su negocio. Algunas opciones de evolución:</p>
+    <ul>
+      <li><strong>Página de Facebook</strong> — Cuando cree su página, la integramos a la VCard con un clic</li>
+      <li><strong>TikTok</strong> — Si abre perfil, lo enlazamos también</li>
+      <li><strong>Nuevos paquetes de snacks</strong> — Podemos agregar más paquetes o modificar los existentes</li>
+      <li><strong>Galería ampliada</strong> — Agregar más secciones de fotos por tipo de evento</li>
+      <li><strong>Testimonios con estrellas</strong> — Sección de reseñas de clientes satisfechos</li>
+      <li><strong>Calendario de disponibilidad</strong> — Para que los clientes vean fechas libres</li>
+      <li><strong>Sistema de pagos</strong> — Integración con bancos o servicios de pago en línea</li>
+    </ul>
+    <div class="tip">
+      <strong>💡 Contacto de Soporte Técnico:</strong><br>
+      TREZE LABS — Infraestructura Digital Premium<br>
+      WhatsApp: <strong>221 409 2478</strong><br>
+      Horario: Lunes a Sábado, 9:00 AM — 8:00 PM
+    </div>
+  </div>
+
+  <div class="footer">
+    ZAYARA Maison Soirée — Documentación de Entrega &copy; 2026 Christian Belmont - Desarrollo de Sistemas Digitales<br>
+    Este documento es confidencial y exclusivo para el cliente.
+  </div>
+</body>
+</html>

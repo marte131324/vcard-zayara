@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>ZAYARA Maison Soirée | Decoraciones & Eventos</title>
+    
+    <!-- Open Graph / WhatsApp Preview -->
+    <meta property="og:title" content="ZAYARA Maison Soirée | Decoraciones & Eventos">
+    <meta property="og:description" content="Decoraciones, centros de mesa, mesa de snacks y asesoría integral para XV Años, Bodas, Bautizos y Fiestas Infantiles en Veracruz.">
+    <meta property="og:image" content="https://vcard-zayara.vercel.app/assets/logo/logo.jpeg">
+    <meta property="og:url" content="https://vcard-zayara.vercel.app/">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="es_MX">
+    <meta property="fb:app_id" content="966242223397117">
+    
+    <!-- Theme -->
+    <meta name="theme-color" content="#0D1B35">
+    
+    <!-- Icons -->
+    <link rel="icon" type="image/jpeg" href="assets/logo/logo.jpeg">
+    <link rel="apple-touch-icon" href="assets/logo/logo.jpeg">
+
+    <!-- Fonts & Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Libs -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
+</head>
+<body>
+    <!-- THEME TOGGLE -->
+    <button class="theme-toggle" id="theme-btn" onclick="toggleTheme()" aria-label="Cambiar tema">
+        <i class="ri-moon-line" id="theme-icon"></i>
+    </button>
+
+    <!-- SPLASH SCREEN -->
+    <div class="intro-splash" id="intro">
+        <div class="splash-unit" id="splash-logo">
+            <img src="assets/logo/logo.jpeg" alt="Logo ZAYARA">
+        </div>
+        <p class="splash-tagline" id="splash-tag">Creando momentos inolvidables</p>
+    </div>
+
+    <!-- MENU OVERLAY (Catálogo de Snacks) -->
+    <div class="menu-overlay" id="menu-view">
+        <i class="ri-close-line menu-close" onclick="closeMenu()"></i>
+        <h2 class="section-title-small">Mesa de Snacks</h2>
+        <p class="section-subtitle">Para todo tipo de evento</p>
+        
+        <div class="menu-scroll">
+            <div class="menu-header-img">
+                <img src="assets/Img/gal-snacks.jpg" alt="Mesa de Snacks">
+            </div>
+            
+            <div class="menu-content-wrap">
+                <p class="menu-intro">Todos nuestros paquetes incluyen de cortesía: <strong>Salsa Botanera, Valentina y Chamoy</strong>.</p>
+
+                <!-- PAQUETES -->
+                <div class="premium-menu-section">
+                    <h3 class="premium-menu-title"><i class="ri-vip-diamond-line"></i> Paquetes</h3>
+                    <div class="package-cards">
+                        <div class="package-card">
+                            <div class="pkg-header">
+                                <h4>Básico</h4>
+                                <span class="pkg-price">$1,500</span>
+                            </div>
+                            <p>Para 50 personas</p>
+                            <span class="pkg-detail">2 opciones por producto</span>
+                        </div>
+                        <div class="package-card">
+                            <div class="pkg-header">
+                                <h4>Mediano</h4>
+                                <span class="pkg-price">$2,850</span>
+                            </div>
+                            <p>Para 100 personas</p>
+                            <span class="pkg-detail">3 opciones por producto</span>
+                        </div>
+                        <div class="package-card gold">
+                            <div class="pkg-header">
+                                <h4>Premium</h4>
+                                <span class="pkg-price">$3,750</span>
+                            </div>
+                            <p>Para 150 personas</p>
+                            <span class="pkg-detail">3 opciones + verdura</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CATEGORIAS DE PRODUCTOS -->
+                <div class="premium-menu-section">
+                    <h3 class="premium-menu-title"><i class="ri-list-check"></i> Catálogo de Selección</h3>
+                    
+                    <div class="menu-list-group">
+                        <div class="menu-list-header">Fritura Salada</div>
+                        <div class="menu-list-items">Chicharrón cuadrado, Chicharrón lagrimita, Chicharrón redondo, Papas saladas, Palomitas.</div>
+                    </div>
+
+                    <div class="menu-list-group">
+                        <div class="menu-list-header">Botana Salada</div>
+                        <div class="menu-list-items">Cacahuate japonés, Cacahuate salado, Cacahuate enchilado, Churritos salados, Churrito enchilado.</div>
+                    </div>
+
+                    <div class="menu-list-group">
+                        <div class="menu-list-header">Dulces Picantes</div>
+                        <div class="menu-list-items">Manguito enchilado, Paleta de tamarindo, Pulparindo mini, Tarugo (tamarindo mini).</div>
+                    </div>
+
+                    <div class="menu-list-group">
+                        <div class="menu-list-header">Caramelo</div>
+                        <div class="menu-list-items">Bocadines, Barquillo de bombón, Kranki, Oblea mini, Mazapán mini, Huevito de chocolates, Chocoretas.</div>
+                    </div>
+
+                    <div class="menu-list-group">
+                        <div class="menu-list-header">Gomitas</div>
+                        <div class="menu-list-items">Gusanitos, Panditas, Tiburoncitos, Gomita clásica (pirámide).</div>
+                    </div>
+
+                    <div class="menu-list-group">
+                        <div class="menu-list-header">Verduras Fresh</div>
+                        <div class="menu-list-items">Zanahoria, Jícama, Pepino, Piña, Fruta de temporada.</div>
+                    </div>
+                </div>
+
+                <!-- REAL MENUS PREVIEWS -->
+                <div class="premium-menu-section">
+                    <h3 class="premium-menu-title"><i class="ri-image-line"></i> Menús Originales</h3>
+                    <div class="real-menus">
+                        <img src="assets/menu/menu1.jpeg" alt="Menu Oficial" onclick="openLightbox(this.src)">
+                        <img src="assets/menu/menu2.jpeg" alt="Menu Lista" onclick="openLightbox(this.src)">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- =============================== -->
+    <!-- MAIN APP                        -->
+    <!-- =============================== -->
+    <main class="app-frame" id="app">
+
+        <!-- HERO SECTION -->
+        <header class="hero-section reveal">
+            <div class="hero-bg">
+                <video autoplay loop muted playsinline class="hero-bg-video">
+                    <source src="assets/video/hero-video.mp4" type="video/mp4">
+                    <img src="assets/Img/hero-bg.jpg" alt="Evento elegante" class="hero-bg-img">
+                </video>
+                <div class="hero-overlay"></div>
+            </div>
+
+            <div class="hero-content">
+                <div class="brand-prof-unit" data-tilt>
+                    <img src="assets/logo/logo.jpeg" alt="Logo ZAYARA">
+                </div>
+                
+                <h1 class="brand-name">Zayara</h1>
+                <p class="brand-sub">Maison Soiree</p>
+                <p class="brand-tagline">Queremos ser parte de tus mejores momentos, haciendolos unicos e inolvidables</p>
+
+                <!-- Trust Badges -->
+                <div class="trust-badges">
+                    <div class="badge"><i class="ri-map-pin-2-fill"></i> Veracruz</div>
+                    <div class="badge"><i class="ri-star-fill"></i> Eventos Premium</div>
+                    <div class="badge"><i class="ri-heart-3-fill"></i> Integral</div>
+                </div>
+
+                <div class="action-grid">
+                    <a href="https://www.instagram.com/zayara.events/" target="_blank" class="action-pill"><i class="ri-instagram-line"></i></a>
+                    <a href="https://wa.me/522294118697" target="_blank" class="action-pill wa-pill"><i class="ri-whatsapp-line"></i></a>
+                    <a href="#" onclick="openMenu(); return false;" class="action-pill"><i class="ri-restaurant-line"></i></a>
+                    <a href="tel:+522291757215" class="action-pill"><i class="ri-phone-line"></i></a>
+                </div>
+            </div>
+        </header>
+
+        <!-- SECONDARY CTA -->
+        <div class="secondary-cta reveal">
+            <button class="btn-secondary" onclick="openMenu()">
+                <i class="ri-restaurant-2-line"></i> Ver Catalogo de Snacks
+            </button>
+        </div>
+
+        <!-- =============================== -->
+        <!-- CATALOGUE / SERVICES            -->
+        <!-- =============================== -->
+        <section class="reveal catalogue-section" style="position: relative; overflow: hidden; padding-top: 15px;">
+            
+            <span class="section-label">Nuestros Servicios</span>
+            <div class="ornament"><i class="ri-sparkle-fill"></i></div>
+
+            <!-- DECORACIONES -->
+            <div class="boho-card accent-left">
+                <div class="card-top">
+                    <img src="assets/Img/serv-decor.jpg" alt="Decoracion de evento" onclick="openLightbox(this.src)" style="cursor: zoom-in;">
+                </div>
+                <div class="card-desc">
+                    <h3>Decoraciones</h3>
+                    <p>Ambientacion completa con tematicas unicas y personalizadas para cada celebracion.</p>
+                    <div class="card-tags">
+                        <span class="card-tag">XV Anos</span>
+                        <span class="card-tag">Bodas</span>
+                        <span class="card-tag">Bautizos</span>
+                        <span class="card-tag">Fiestas Infantiles</span>
+                    </div>
+                    <span class="card-price" onclick="openForm()">Cotizar</span>
+                </div>
+            </div>
+
+            <!-- CENTROS DE MESA -->
+            <div class="boho-card">
+                <div class="card-top">
+                    <img src="assets/Img/serv-centros.jpg" alt="Centros de mesa elegantes" onclick="openLightbox(this.src)" style="cursor: zoom-in;">
+                </div>
+                <div class="card-desc">
+                    <h3>Centros de Mesa</h3>
+                    <p>Piezas artisticas que elevan cada mesa a otro nivel. Disenos exclusivos para tu evento.</p>
+                    <span class="card-price" onclick="openForm()">Cotizar</span>
+                </div>
+            </div>
+
+            <!-- MESA DE SNACKS -->
+            <div class="boho-card accent-left">
+                <div class="card-top">
+                    <img src="assets/Img/gal-snacks.jpg" alt="Mesa de Snacks ZAYARA" onclick="openLightbox(this.src)" style="cursor: zoom-in;">
+                </div>
+                <div class="card-desc">
+                    <h3>Mesa de Snacks</h3>
+                    <p>Estaciones de botanas dulces, saladas, gomitas, caramelos y verduras frescas con salsas y chilitos.</p>
+                    <span class="card-price gold-btn" onclick="openMenu()">Desde $1,500</span>
+                </div>
+            </div>
+
+            <!-- ASESORÍAS -->
+            <div class="boho-card">
+                <div class="card-top">
+                    <img src="assets/Img/serv-asesoria.jpg" alt="Asesoria de eventos" onclick="openLightbox(this.src)" style="cursor: zoom-in;">
+                </div>
+                <div class="card-desc">
+                    <h3>Asesorias para Eventos</h3>
+                    <p>Consultoria experta para planificar cada detalle. Te guiamos desde la idea hasta la ejecucion perfecta.</p>
+                    <span class="card-price" onclick="openForm()">Consultar</span>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- GALERÍA DE EVENTOS -->
+        <section class="reveal gallery-section">
+            <span class="section-label">Nuestros Eventos</span>
+            <div class="ornament"><i class="ri-sparkle-fill"></i></div>
+
+            <!-- Video 16:9 Capsule -->
+            <div class="video-capsule-container">
+                <div class="video-capsule">
+                    <video autoplay loop muted playsinline>
+                        <source src="assets/video/hero-video.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+
+            <div class="main-gallery">
+                <div class="gallery-item">
+                    <img src="assets/Img/gal-boda.jpg" alt="Bodas ZAYARA" onclick="openLightbox(this.src)">
+                    <div class="gallery-caption">Bodas</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/Img/gal-xv.jpg" alt="XV Años ZAYARA" onclick="openLightbox(this.src)">
+                    <div class="gallery-caption">XV Años</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/Img/gal-bautizo.jpg" alt="Bautizos ZAYARA" onclick="openLightbox(this.src)">
+                    <div class="gallery-caption">Bautizos</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/Img/gal-infantil.jpg" alt="Fiestas Infantiles ZAYARA" onclick="openLightbox(this.src)">
+                    <div class="gallery-caption">Fiestas Infantiles</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/Img/gal-snacks.jpg" alt="Mesa de Snacks ZAYARA" onclick="openLightbox(this.src)">
+                    <div class="gallery-caption">Candy Bars</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <div class="footer-section reveal">
+            <p class="footer-brand">Zayara</p>
+            <p class="footer-sub">Maison Soiree</p>
+            <p class="footer-powered">Desarrollado por <a href="https://wa.me/522214092478" target="_blank">Treze Labs</a></p>
+        </div>
+
+        <!-- SPACER -->
+        <div style="height: 100px;"></div>
+
+    </main>
+
+    <!-- =============================== -->
+    <!-- COTIZADOR MULTI-STEP            -->
+    <!-- =============================== -->
+    <div class="form-overlay" id="form-view">
+        <div class="form-header">
+            <i class="ri-close-line" style="font-size: 1.5rem; cursor: pointer;" onclick="closeForm()"></i>
+            <div class="progress-bar-wrap">
+                <div class="progress-bar-fill" id="form-progress"></div>
+            </div>
+            <span id="step-counter" style="font-size: 0.78rem; font-weight: 600; color: var(--accent-dark);">1 / 6</span>
+        </div>
+
+        <div class="step-container">
+
+            <!-- STEP 1: TIPO DE EVENTO -->
+            <div class="step active" id="step-1">
+                <h2 class="step-title">Que tipo de evento celebras?</h2>
+                <p class="step-desc">Selecciona la celebracion que estas planeando.</p>
+                <div class="form-options">
+                    <div class="option-card" data-val="XV Anos" onclick="selectStepOption(this, 1)">
+                        <i class="ri-vip-crown-line"></i>
+                        <div>
+                            <strong>XV Anos</strong>
+                            <div class="sub-options"><span class="sub-option">Decoracion tematica, backdrop, centros de mesa</span></div>
+                        </div>
+                    </div>
+                    <div class="option-card" data-val="Boda" onclick="selectStepOption(this, 1)">
+                        <i class="ri-heart-2-line"></i>
+                        <div>
+                            <strong>Boda</strong>
+                            <div class="sub-options"><span class="sub-option">Ceremonia y recepcion con ambientacion premium</span></div>
+                        </div>
+                    </div>
+                    <div class="option-card" data-val="Bautizo" onclick="selectStepOption(this, 1)">
+                        <i class="ri-star-smile-line"></i>
+                        <div>
+                            <strong>Bautizo</strong>
+                            <div class="sub-options"><span class="sub-option">Ambientaciones delicadas y llenas de ternura</span></div>
+                        </div>
+                    </div>
+                    <div class="option-card" data-val="Fiesta Infantil" onclick="selectStepOption(this, 1)">
+                        <i class="ri-balloon-line"></i>
+                        <div>
+                            <strong>Fiesta Infantil</strong>
+                            <div class="sub-options"><span class="sub-option">Tematicas coloridas, globos artisticos y escenarios magicos</span></div>
+                        </div>
+                    </div>
+                    <div class="option-card" data-val="Otro evento" onclick="selectStepOption(this, 1)">
+                        <i class="ri-calendar-event-line"></i>
+                        <div>
+                            <strong>Otro Evento</strong>
+                            <div class="sub-options"><span class="sub-option">Baby shower, primera comunion, cumpleanos, etc.</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- STEP 2: SERVICIOS -->
+            <div class="step" id="step-2">
+                <h2 class="step-title">Que servicios necesitas?</h2>
+                <p class="step-desc">Puedes seleccionar varios.</p>
+                <div class="form-options">
+                    <div class="option-card" data-val="Decoracion completa" onclick="toggleService(this)">
+                        <i class="ri-sparkling-2-line"></i>
+                        <div><strong>Decoracion Completa</strong>
+                            <div class="sub-options"><span class="sub-option">Ambientacion integral del salon o espacio</span></div>
+                        </div>
+                    </div>
+                    <div class="option-card" data-val="Centros de mesa" onclick="toggleService(this)">
+                        <i class="ri-flower-line"></i>
+                        <div><strong>Centros de Mesa</strong>
+                            <div class="sub-options"><span class="sub-option">Disenos personalizados por mesa</span></div>
+                        </div>
+                    </div>
+                    <div class="option-card" data-val="Mesa de snacks" onclick="toggleService(this)">
+                        <i class="ri-restaurant-2-line"></i>
+                        <div><strong>Mesa de Snacks</strong>
+                            <div class="sub-options"><span class="sub-option">Estacion de botanas, gomitas, dulces y mas</span></div>
+                        </div>
+                    </div>
+                    <div class="option-card" data-val="Asesoria de evento" onclick="toggleService(this)">
+                        <i class="ri-clipboard-line"></i>
+                        <div><strong>Asesoria de Evento</strong>
+                            <div class="sub-options"><span class="sub-option">Planificacion y coordinacion completa</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- STEP 2.5: MESA DE SNACKS (Dynamic) -->
+            <div class="step" id="step-snacks">
+                <h2 class="step-title">Configura tu Mesa de Snacks</h2>
+                <p class="step-desc">Primero, elige tu paquete <strong>Mesa de Snacks</strong>.</p>
+                
+                <div class="form-grid" id="snacks-package-selector" style="margin-bottom:20px;">
+                    <div class="option-card px-option" data-val="Básico" onclick="selectSnackPackage(this, 'basico', { f:2, b:2, d:2, c:2, g:2, v:0 }, '50')">
+                        <i class="fas fa-box" style="color:var(--accent); margin-bottom:5px;"></i>
+                        <strong>Básico (50 Personas)</strong>
+                        <span style="font-size:0.75rem; color:var(--text-light); text-transform:none; margin-top:5px;">2 opciones de c/u.<br>$1,500</span>
+                    </div>
+                    <div class="option-card px-option" data-val="Medio" onclick="selectSnackPackage(this, 'medio', { f:3, b:3, d:2, c:2, g:2, v:0 }, '100')">
+                        <i class="fas fa-gift" style="color:var(--accent); margin-bottom:5px;"></i>
+                        <strong>Medio (100 Personas)</strong>
+                        <span style="font-size:0.75rem; color:var(--text-light); text-transform:none; margin-top:5px;">3 opciones (frit/bot).<br>$2,850</span>
+                    </div>
+                    <div class="option-card px-option gold-card" style="box-shadow: 0 4px 15px rgba(201,168,108,0.3); border-color:var(--accent);" data-val="Premium" onclick="selectSnackPackage(this, 'premium', { f:3, b:2, d:2, c:3, g:2, v:3 }, '150')">
+                        <i class="fas fa-crown" style="color:var(--accent); margin-bottom:5px;"></i>
+                        <strong>Premium (150 Personas)</strong>
+                        <span style="font-size:0.75rem; color:var(--text-light); text-transform:none; margin-top:5px;">Opciones extendidas + Verdura.<br>$3,750</span>
+                    </div>
+                    <div class="option-card px-option" data-val="Personalizado" onclick="selectSnackPackage(this, 'custom', null, '')">
+                        <i class="fas fa-users-cog" style="color:#aaa; margin-bottom:5px;"></i>
+                        <strong>Personalizado</strong>
+                        <span style="font-size:0.75rem; color:var(--text-light); text-transform:none; margin-top:5px;">Otra cantidad de invitados.<br>Cotización manual.</span>
+                    </div>
+                </div>
+
+                <div id="snacks-selections-container" style="display:none; transition: all 0.3s ease;">
+                    <h3 class="step-title-secondary" style="font-size:1.1rem; color:var(--accent); border-top:1px solid rgba(255,255,255,0.1); padding-top:15px;">Elige tus productos</h3>
+                    <p class="step-desc" style="color:#aaa; font-size:0.8rem;">Selecciona hasta el límite permitido por tu paquete.</p>
+                    
+                    <div class="snacks-selections">
+                        <p class="form-sub-label">Fritura Salada <span class="counter" id="count-f">0/x</span></p>
+                        <div class="pill-group" data-cat="f">
+                            <span class="pill-option small" onclick="toggleSnackItem(this, 'f')" data-val="Chicharron cuadrado">Cuadrado</span>
+                            <span class="pill-option small" onclick="toggleSnackItem(this, 'f')" data-val="Chicharron lagrimita">Lagrimita</span>
+                            <span class="pill-option small" onclick="toggleSnackItem(this, 'f')" data-val="Chicharron redondo">Redondo</span>
+                            <span class="pill-option small" onclick="toggleSnackItem(this, 'f')" data-val="Papas saladas">Papas</span>
+                            <span class="pill-option small" onclick="toggleSnackItem(this, 'f')" data-val="Palomitas">Palomitas</span>
+                        </div>
+
+                        <p class="form-sub-label">Botana Salada <span class="counter" id="count-b">0/x</span></p>
+                        <div class="pill-group" data-cat="b">
+                            <span class="pill-option small" onclick="toggleSnackItem(this, 'b')" data-val="Cacahuate japones">Cacahuate Japones</span>
+                            <span class="pill-option small" onclick="toggleSnackItem(this, 'b')" data-val="Cacahuate salado">Cacahuate Salado</span>
+                            <span class="pill-option small" onclick="toggleSnackItem(this, 'b')" data-val="Cacahuate enchilado">Cacahuate Enchilado</span>
+                            <span class="pill-option small" onclick="toggleSnackItem(this, 'b')" data-val="Churritos salados">Churritos salados</span>
+                            <span class="pill-option small" onclick="toggleSnackItem(this, 'b')" data-val="Churrito enchilado">Churritos enchilados</span>
+                        </div>
+                        
+                        <p class="form-sub-label">Dulces Picantes <span class="counter" id="count-d">0/x</span></p>
+                        <div class="pill-group" data-cat="d">
+                            <span class="pill-option small" onclick="toggleSnackItem(this, 'd')" data-val="Manguito enchilado">Manguito</span>
+                            <span class="pill-option small" onclick="toggleSnackItem(this, 'd')" data-val="Paleta de tamarindo">Paleta</span>
+                            <span class="pill-option small" onclick="toggleSnackItem(this, 'd')" data-val="Pulparindo mini">Pulparindo</span>
+                            <span class="pill-option small" onclick="toggleSnackItem(this, 'd')" data-val="Tarugo">Tarugo</span>
+                        </div>
+
+                        <p class="form-sub-label">Caramelo <span class="counter" id="count-c">0/x</span></p>
+                        <div class="pill-group" data-cat="c">
+                            <span class="pill-option small" onclick="toggleSnackItem(this, 'c')" data-val="Bocadines">Bocadines</span>
+                            <span class="pill-option small" onclick="toggleSnackItem(this, 'c')" data-val="Barquillo">Barquillo</span>
+                            <span class="pill-option small" onclick="toggleSnackItem(this, 'c')" data-val="Kranki">Kranki</span>
+                            <span class="pill-option small" onclick="toggleSnackItem(this, 'c')" data-val="Oblea mini">Oblea</span>
+                            <span class="pill-option small" onclick="toggleSnackItem(this, 'c')" data-val="Mazapan mini">Mazapan</span>
+                            <span class="pill-option small" onclick="toggleSnackItem(this, 'c')" data-val="Huevito chocolate">Huevito</span>
+                            <span class="pill-option small" onclick="toggleSnackItem(this, 'c')" data-val="Chocoretas">Chocoretas</span>
+                        </div>
+
+                        <p class="form-sub-label">Gomitas <span class="counter" id="count-g">0/x</span></p>
+                        <div class="pill-group" data-cat="g">
+                            <span class="pill-option small" onclick="toggleSnackItem(this, 'g')" data-val="Gusanitos">Gusanitos</span>
+                            <span class="pill-option small" onclick="toggleSnackItem(this, 'g')" data-val="Panditas">Panditas</span>
+                            <span class="pill-option small" onclick="toggleSnackItem(this, 'g')" data-val="Tiburoncitos">Tiburoncitos</span>
+                            <span class="pill-option small" onclick="toggleSnackItem(this, 'g')" data-val="Gomita piramide">Piramide</span>
+                        </div>
+
+                        <div id="verduras-container" style="display:none;">
+                            <p class="form-sub-label" style="color:var(--accent);">Verduras <span class="counter" id="count-v">0/x</span></p>
+                            <div class="pill-group" data-cat="v">
+                                <span class="pill-option small outline-accent" onclick="toggleSnackItem(this, 'v')" data-val="Zanahoria">Zanahoria</span>
+                                <span class="pill-option small outline-accent" onclick="toggleSnackItem(this, 'v')" data-val="Jicama">Jicama</span>
+                                <span class="pill-option small outline-accent" onclick="toggleSnackItem(this, 'v')" data-val="Pepino">Pepino</span>
+                                <span class="pill-option small outline-accent" onclick="toggleSnackItem(this, 'v')" data-val="Pina">Pina</span>
+                                <span class="pill-option small outline-accent" onclick="toggleSnackItem(this, 'v')" data-val="Fruta temporada">De Temporada</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- STEP 3: INVITADOS -->
+            <div class="step" id="step-3">
+                <h2 class="step-title">Cuantos invitados?</h2>
+                <p class="step-desc">Para dimensionar los servicios y materiales.</p>
+                <div class="form-grid">
+                    <div class="pill-option" data-val="30-50" onclick="selectStepOption(this, 3)">
+                        <span class="pill-number">30-50</span>
+                        <span class="pill-label">Intimo</span>
+                    </div>
+                    <div class="pill-option" data-val="50-100" onclick="selectStepOption(this, 3)">
+                        <span class="pill-number">50-100</span>
+                        <span class="pill-label">Mediano</span>
+                    </div>
+                    <div class="pill-option" data-val="100-200" onclick="selectStepOption(this, 3)">
+                        <span class="pill-number">100-200</span>
+                        <span class="pill-label">Grande</span>
+                    </div>
+                    <div class="pill-option" data-val="200+" onclick="selectStepOption(this, 3)">
+                        <span class="pill-number">200+</span>
+                        <span class="pill-label">Magno</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- STEP 4: FECHA Y LUGAR -->
+            <div class="step" id="step-4">
+                <h2 class="step-title">Cuando y donde sera?</h2>
+                <p class="step-desc">Para revisar disponibilidad y logistica.</p>
+                <input type="date" id="event-date" class="form-input" onchange="validateStep(4)">
+                <input type="text" id="event-location" class="form-input" placeholder="Ciudad o colonia" oninput="validateStep(4)">
+                <input type="text" id="event-venue" class="form-input" placeholder="Nombre del salon o domicilio (opcional)" oninput="validateStep(4)">
+            </div>
+
+            <!-- STEP 5: CONTACTO -->
+            <div class="step" id="step-5">
+                <h2 class="step-title">Datos de contacto</h2>
+                <p class="step-desc">Para enviarte la cotizacion personalizada.</p>
+                <input type="text" id="contact-name" class="form-input" placeholder="Tu nombre" oninput="validateStep(5)">
+                <input type="tel" id="contact-wa" class="form-input" placeholder="Tu WhatsApp (10 digitos)" oninput="validateStep(5)">
+            </div>
+
+            <!-- STEP 6: RESUMEN -->
+            <div class="step" id="step-6">
+                <h2 class="step-title">Tu Solicitud</h2>
+                <p class="step-desc">Revisa el resumen antes de enviar por WhatsApp.</p>
+                <div id="quote-summary" class="quote-summary"></div>
+            </div>
+
+        </div>
+
+        <div class="form-nav">
+            <button class="btn-form btn-prev" id="btn-prev" onclick="changeStep(-1)" style="visibility: hidden;">Anterior</button>
+            <button class="btn-form btn-next" id="btn-next" onclick="changeStep(1)" disabled>Siguiente</button>
+        </div>
+    </div>
+
+    <!-- LIGHTBOX -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <img id="lightbox-img" src="" alt="Vista previa">
+    </div>
+
+    <!-- FLOATING CTA -->
+    <div class="fixed-cta reveal">
+        <button class="btn-boutique" onclick="openForm()">
+            <i class="ri-sparkling-line"></i> Cotizar Mi Evento
+        </button>
+    </div>
+
+    <!-- INTERACTIVE TOUR -->
+    <button class="tour-trigger" onclick="startTour()" aria-label="Tour guiado">
+        <i class="ri-compass-3-line"></i>
+    </button>
+    <div class="tour-overlay" id="tour-overlay"></div>
+    <div class="tour-spotlight" id="tour-spotlight"></div>
+    <div class="tour-tooltip" id="tour-tooltip">
+        <div class="tour-tooltip-step" id="tour-step-label"></div>
+        <div class="tour-tooltip-title" id="tour-title"></div>
+        <div class="tour-tooltip-desc" id="tour-desc"></div>
+        <div class="tour-nav">
+            <button class="tour-btn tour-btn-skip" onclick="endTour()">Salir</button>
+            <button class="tour-btn tour-btn-next" id="tour-next-btn" onclick="nextTourStep()">Siguiente</button>
+        </div>
+        <div class="tour-progress" id="tour-progress"></div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script src="js/app.js" charset="UTF-8"></script>
+
+<!-- TREZE SIGNATURE -->
+<a href="https://wa.me/522214092478?text=Hola%20Treze%20Labs%2C%20me%20gustar%C3%ADa%20solicitar%20el%20desarrollo%20de%20un%20sistema%20profesional." target="_blank" style="display: flex; justify-content: center; text-decoration: none; margin-top: 24px; margin-bottom: 24px; opacity: 0.6; transition: opacity 0.3s ease;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.6'">
+    <img src="assets/footer.png" alt="Ingeniería Digital por Treze Labs" style="max-height: 38px; object-fit: contain; filter: brightness(0);">
+</a>
+
+</body>
+</html>
+
+<!-- Script toggleTheme (Temporal placement, moving to end script later if needed) -->
+<script>
+    function toggleTheme() {
+        document.body.classList.toggle('dark-theme');
+        const icon = document.getElementById('theme-icon');
+        if(document.body.classList.contains('dark-theme')) {
+            icon.classList.replace('ri-moon-line', 'ri-sun-line');
+        } else {
+            icon.classList.replace('ri-sun-line', 'ri-moon-line');
+        }
+    }
+</script>
